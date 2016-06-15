@@ -1,0 +1,27 @@
+template(name='layout1')
+    head
+        meta(charset='utf-8')
+        title Carer Centre -CLASP
+        // Responsive
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
+        //if lt IE 9
+            script(src='http://html5shim.googlecode.com/svn/trunk/html5.js')
+    | {{> Template.dynamic template=top}}
+    | {{> Template.dynamic template=main}}
+    | {{> Template.dynamic template=footer}}
+
+template(name="header")
+    +topMenu
+template(name="footer")
+    footer.wrapper(style='background-image:url(/images/background/footer-bg.jpg);')
+        // Footer Upper
+        // Footer Bottom
+        section.default-section
+            .container-fluid
+                .row.clearfix
+                    .col-md-12.col-sm-12.col-xs-12
+                    .copyright.text-center
+                        | Copyright © TechChaps, application hosted and maintained by
+                        a(href='http://wwww.techchaps.uk') a TechChap
+                    br

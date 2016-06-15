@@ -1,0 +1,127 @@
+template(name="webpublic")
+    .wrapper
+        +lSideBar
+        section.default-section
+            .container-fluid
+                .row.clearfix
+                    //.column.col-lg-8.col-md-9.col-sm-9.col-xs-9(style="margin:-30px 0 0 0;")
+                    .column.col-lg-10.col-md-9.col-sm-9.col-xs-9(style="margin:-30px 0 0 0;")
+                        .plistzz(style="padding:0 0 0 10px; margin:-30px 0 0 0;")
+                            div
+                                +if param 'show' s23223
+                                    h1 it is {{param 'show'}}
+                                    | ID of this post is
+                                    em {{param 'show'}}
+                            +pagesList
+        +footer
+    .scroll-to-top.scroll-to-target(data-target='.main-header')
+        span.fa.fa-arrow-up
+template(name="pagesList")
+    .row
+        .well
+            .pull-left
+                .btn-group
+                button.btn.btn-filter(type='button', data-target='pagado', class='{{#unless TemplateVar.get "show"}}btn-default{{else}}btn-warning{{/unless}}' )
+                    +unless TemplateVar.get "show"
+                        | Create New Page
+                    +else
+                        | Close
+                +if TemplateVar.get "show"
+                    button#saveContentForPage.btn.btn-filter(type='button', class='btn-default' ) Save
+            .pull-right
+                .btn-group
+                    button.btn.btn-success.btn-filter(type='button', data-target='pagado') All
+                    button.btn.btn-warning.btn-filter(type='button', data-target='pendiente') Published
+                    button.btn.btn-default.btn-filter(type='button', data-target='cancelado') Draft
+                    button.btn.btn-default.btn-filter(type='button', data-target='all') Archived
+            br
+            br
+            .imageView
+                +each images
+                    div
+                        a(href='{{this.url}}', target='_blank')
+                            img.thumbnail(src="{{this.url store='thumbs' uploading='/images/uploading.gif' storing='/images/storing.gif'}}", alt='')
+            form
+                +froalaReactive getFEContext
+            +if TemplateVar.get 'show'
+                div()
+                    //form
+                    //    +froalaReactive getFEContext
+                .fr-view
+                    hr
+                    h3 Pages List
+                //+quickForm id="pagesInsertQf" collection="Pages" type="insert"
+            .list-group
+                +each pages
+                    a.list-group-item(href='#')
+                        .col-md-9
+                            h4.list-group-item-heading
+                                =title
+                            p.list-group-item-text
+                                !=content
+                        .col-md-3.text-center
+                            br
+                            p
+                                | Hits: Average 3.9
+                                small  -
+                                |  In all 12424 Hits
+                            button.btn.btn-default.btn-lg.btn-block(type='button')  Open Page
+                a.list-group-item(href='#')
+                    .col-md-9
+                        h4.list-group-item-heading  List group heading
+                        p.list-group-item-text
+                            | Qui diam libris ei, vidisse incorrupte at mel. His euismod salutandi dissentiunt eu. Habeo offendit ea mea. Nostro blandit sea ea, viris timeam molestiae an has. At nisl platonem eum.
+                            | Vel et nonumy gubergren, ad has tota facilis probatus. Ea legere legimus tibique cum, sale tantas vim ea, eu vivendo expetendis vim. Voluptua vituperatoribus et mel, ius no elitr deserunt mediocrem. Mea facilisi torquatos ad.
+                    .col-md-3.text-center
+                        br
+                        p
+                            | Hits: Average 3.9
+                            small  -
+                            |  In all 12424 Hits
+                        button.btn.btn-default.btn-lg.btn-block(type='button')  Open Page
+template(name="lSideBar")
+    nav.navbar.navbar-default.sidebar(role='navigation')
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-sidebar-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            div#bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='#')
+                            | Pages
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-page.svg', alt='pages')
+                    li
+                        a(href='#')
+                            | Menus
+                            span.pull-right.hidden-xs.glyphicon.glyphicon-option-vertical(style='font-size:16px; color:black')
+                    li
+                        a(href='#')
+                            | Users
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-users.svg', alt='pages')
+                    li.dropdown
+                        a.dropdown-toggle(href='#', data-toggle='dropdown')
+                            | Widgets
+                            span.caret
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-plugins.svg', alt='pages')
+                        ul.dropdown-menu.forAnimate(role='menu')
+                            li
+                                a(href="#") Sliders
+                            li
+                                a(href='#') Forms
+                            li
+                                a(href='#') Feeds
+                            li.divider
+                            li
+                                a(href='#') Links
+                    li
+                        a(href='#')
+                            | Tags
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-post.svg', alt='pages')

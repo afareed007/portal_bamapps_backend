@@ -1,0 +1,102 @@
+template(name="pagecontactus")
+    .page-wrapper
+        section.contact-section(style='background-image:url(/images/map.png);')
+            .auto-container
+                .inner-container
+                    .sec-title.text-center
+                        h2
+                            | Contact
+                            span.normal-font Us
+                        .text
+                            | The Carers Centre is located in Leicester City Centre overlooking the Train Station.
+                        div
+                            | Please phone 0116 251 0999 if you have difficulty finding us. Click
+                            a(href='http://www.bing.com/mapspreview?&ty=18&q=le1%201pl&mb=53.111757~-2.888473~51.073769~0.676591&tt=LE1%201PL&tsts0=%2526ty%253d18%2526q%253dle1%2525201pl%2526mb%253d53.111757~-2.888473~51.073769~0.676591&tstt0=LE1%201PL&cp=52.63404~-1.12566&lvl=17&ftst=0&ftics=False&v=2&sV=1&form=S00027')
+                                | map
+                            |  to see where we are on Multimap.
+                    .contact-info.row.clearfix
+                        .info-column.col-lg-4.col-md-6.col-xs-12
+                            .inner-box
+                                .icon
+                                    span.flaticon-location
+                                h4 ADDRESS
+                                |                             CLASP The Carers Centre Unit 19,
+                                br
+                                |                             4th Floor, Matrix House, Constitution Hill,
+                                br
+                                |                             Leicester, UK, LE1 1PL
+                                br
+                                br
+                                a(href='http://www.bing.com/mapspreview?&ty=18&q=le1%201pl&mb=53.111757~-2.888473~51.073769~0.676591&tt=LE1%201PL&tsts0=%2526ty%253d18%2526q%253dle1%2525201pl%2526mb%253d53.111757~-2.888473~51.073769~0.676591&tstt0=LE1%201PL&cp=52.63404~-1.12566&lvl=17&ftst=0&ftics=False&v=2&sV=1&form=S00027')
+                                    | Click
+                                    u
+                                        b map
+                                    |  to see where we are on Multimap.
+                        // Info COlumn
+                        .info-column.col-lg-4.col-md-6.col-xs-12
+                            .inner-box
+                                .icon
+                                    span.flaticon-technology
+                                h4 Phone
+                                |  0116 251 0999
+                        // Info COlumn
+                        .info-column.col-lg-4.col-md-6.col-xs-12
+                            .inner-box
+                                .icon
+                                    span.flaticon-interface
+                                h4 Email
+                                a(href='mailto:enquiries@claspthecarerscentre.org.uk') enquiries@claspthecarerscentre.org.uk
+                    .sec-title.left
+                        .text
+                            h3  From the Motorway
+                            p
+                                | Leave the M1 at Junction 21. Take the A5460 to the city centre.
+                                | Follow signs to the Train Station. Take a left after St Georges Retail Park.
+                                | You should see the entrance to Matrix house on the right
+                            h3  By Train
+                            |                         Turn right out of the Train Station
+                            |                         Keep following the main road round on the right
+                            |                         This main road is St George's Way
+                            |                         Look for the Leicester Mercury Building to your left
+                            |                         Look out for a Ibis hotel straight ahead
+                            |                         Matrix House, our office building, is behind the Ibis hotel
+                            |                         Not more than five minutes slow walk but take a taxi from the train station if you need one.
+                            |                         Please click contact us to tell us about ways in which these directions can be improved.
+                    // Form Container
+                    .contact-form-container.wow.fadeInUp(data-wow-delay='200ms', data-wow-duration='1500ms')
+                        form#contact-form(method='post', action='sendemail.php')
+                            .row.clearfix
+                                .column.col-md-6.col-sm-12.col-xs-12
+                                    .form-group
+                                        input(type='text', name='username', value='', placeholder='Username')
+                                    .form-group
+                                        input(type='email', name='email', value='', placeholder='Email')
+                                    .form-group
+                                        input(type='text', name='phone', value='', placeholder='Phone')
+                                .column.col-md-6.col-sm-12.col-xs-12
+                                    .form-group
+                                        textarea(name='message', placeholder='Your Message')
+                                .form-group.col-md-12.col-xs-12
+                                    .text-center
+                                        button.theme-btn.btn-style-two(type='submit', name='submit') SEND
+        section.subscribe-intro
+            .auto-container
+                .row.clearfix
+                    .column.col-md-9.col-sm-12.col-xs-12
+                        h2 Subcribe for Information and Magazine
+                        |                     We will use your email to send you our Magazine and events information. Your email will only be used by our organisation.
+                    .column.col-md-3.col-sm-12.col-xs-12
+                        .text-right.padd-top-20
+                            a.theme-btn.btn-style-three(href='#') Subscribe Now
+        +footer
+    .scroll-to-top.scroll-to-target(data-target='.main-header')
+        span.fa.fa-arrow-up
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/revolution.min.js')
+    script(src='/js/jquery.appear.js')
+    script(src='/js/knob.js')
+    script(src='/js/jquery.fancybox.pack.js')
+    script(src='/js/jquery.fancybox-media.js')
+    script(src='/js/validate.js')
+    script(src='/js/wow.js')
+    script(src='/js/script.js')
