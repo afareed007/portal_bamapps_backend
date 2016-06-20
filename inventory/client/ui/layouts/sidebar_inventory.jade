@@ -1,0 +1,25 @@
+template(name="sideBarInventory")
+    nav.navbar.navbar-default.sidebar(role='navigation')
+        .container-fluid
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-sidebar-navbar-collapse-1')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            div#bs-sidebar-navbar-collapse-1.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='itemslist')
+                            | Items
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-page.svg', alt='pages')
+                    li
+                        a(href='createitem')
+                            | Add Items
+                            span.pull-right.hidden-xs.glyphicon.glyphicon-plus(style='font-size:16px; color:black')
+                    li
+                        a(href='manageusers')
+                            | Users
+                            span.pull-right.hidden-xs.dashicon(style='font-size:16px;')
+                                img(src='/images/icons-used/dashicons/svg/admin-users.svg', alt='pages')

@@ -1,0 +1,63 @@
+template(name="itemslist")
+    .wrapper
+        +sideBarInventory
+        section.default-section
+            .container-fluid
+                .row.clearfix
+                    //.column.col-lg-8.col-md-9.col-sm-9.col-xs-9(style="margin:-30px 0 0 0;")
+                    .column.col-lg-10.col-md-9.col-sm-9.col-xs-9(style="margin:-30px 0 0 0;")
+                        .plistzz(style="padding:0 0 0 10px; margin:-30px 0 0 0;")
+                            div
+                                h3  Items List
+                            +itemsList
+template(name="itemsList")
+    .row
+        table.table.table-striped
+            thead
+                tr
+                    th ref #
+                    th Item Name
+                    //th Location
+                    th Status
+            tbody
+                tr
+                    td WW-141
+                    td 3D Printer
+                    //td Electronics Bench -ref:EL-21
+                    td Ready to Use
+                tr
+                    td WW-141
+                    td Milling M -ref:WW-3
+                    //td Wood Works
+                    td Out for Maintenance
+                tr
+                    td WW-141
+                    td Drill
+                    //td Wood Works-Red Tool Box -ref:WW-3
+                    td Working - Needs Maintenance
+        ul.list-group
+            li.list-group-item
+                h3  First item
+                .row
+                    .col-sm-5
+                        p
+                            b Description:
+                            | description of item goes here !
+                    .col-sm-5
+                        b   Location:
+                        | Woodwork area
+                .row
+                    .col-sm-5
+                        p
+                            b Description:
+                            | description of item goes here !
+                    .col-sm-5
+                        b   Location:
+                        | Woodwork area
+            li.list-group-item
+                h3  First item
+                p
+                    b Description:
+                    | description of item goes here !
+            li.list-group-item Second item
+            li.list-group-item Third item
