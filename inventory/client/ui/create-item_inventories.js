@@ -1,5 +1,6 @@
 Template.createitem.helpers({
-    insertInventory: function(){
+    'insertInventory': function(){
         return Schemas.Inventories;
     }
+
 });

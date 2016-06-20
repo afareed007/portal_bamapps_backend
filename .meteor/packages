@@ -35,3 +35,8 @@ froala:editor-reactive
 froala:editor
 cfs:standard-packages
 cfs:gridfs
+mdg:validation-error@0.5.1
+momentjs:moment@2.13.1
+summernote:standalone@0.8.1
+alanning:roles
+check
