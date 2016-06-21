@@ -2,46 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26e47d26-66ec-45bf-95c1-cb9f4b7bbde2" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/html_meteor_clasp.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/lib/template.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/lib/templates/topMenu.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/lib/templates/topMenu.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/startup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/forms.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/page-front.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-advocacy.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-breaksdirectory.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-carersforum.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-consultation.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-contactus.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-information.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-supportgroups.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/page-training.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/pages-getabreak-cwc.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/pages/pages-relaxation-diet.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/web-public.jade" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/views/webpublic.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/inventory/lib/rest_api_collections.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/pages_methods.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/server_side_routes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/server/inventories_pubs.js" afterPath="$PROJECT_DIR$/inventory/server/inventories_pubs.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" afterPath="$PROJECT_DIR$/.idea/libraries/meteor_packages_auto_import_browser.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/portal_backend_v1.iml" afterPath="$PROJECT_DIR$/.idea/portal_backend_v1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/packages" afterPath="$PROJECT_DIR$/.meteor/packages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/release" afterPath="$PROJECT_DIR$/.meteor/release" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/client/tpl_helpers_hooks.js" afterPath="$PROJECT_DIR$/inventory/client/tpl_helpers_hooks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/client/ui/create-item_inventories.jade" afterPath="$PROJECT_DIR$/inventory/client/ui/create-item_inventories.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/client/ui/create-item_inventories.js" afterPath="$PROJECT_DIR$/inventory/client/ui/create-item_inventories.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/client/ui/layouts/sidebar_inventory.jade" afterPath="$PROJECT_DIR$/inventory/client/ui/layouts/sidebar_inventory.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/lib/inventories_items_coll.js" afterPath="$PROJECT_DIR$/inventory/lib/inventories_items_coll.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inventory/server/methods_inventories.js" afterPath="$PROJECT_DIR$/inventory/server/methods_inventories.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/fixtures.js" afterPath="$PROJECT_DIR$/server/fixtures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/inventories_pubs.js" afterPath="$PROJECT_DIR$/server/inventories_pubs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/main.js" afterPath="$PROJECT_DIR$/server/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/startup.js" afterPath="$PROJECT_DIR$/server/startup.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/ui/web-public.jade" afterPath="$PROJECT_DIR$/client/ui/web-public.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/ui/webpublic.js" afterPath="$PROJECT_DIR$/client/ui/webpublic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/pages_coll.js" afterPath="$PROJECT_DIR$/lib/pages_coll.js" />
     </list>
     <ignored path="portal_backend_v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="webpublic.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="webpublic.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/ui/webpublic.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6011817">
-              <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="2" selection-end-line="55" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -76,7 +48,29 @@
         <entry file="file://$PROJECT_DIR$/client/ui/web-public.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+              <folding>
+                <marker date="1466457339000" expanded="true" signature="2169:2252" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pages_coll.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/pages_coll.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54239404">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="server_side_routes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/server_side_routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -117,9 +111,14 @@
         <option value="$PROJECT_DIR$/inventory/client/tpl_helpers_hooks.js" />
         <option value="$PROJECT_DIR$/inventory/client/ui/layouts/sidebar_inventory.jade" />
         <option value="$PROJECT_DIR$/inventory/server/methods_inventories.js" />
-        <option value="$PROJECT_DIR$/inventory/lib/inventories_items_coll.js" />
         <option value="$PROJECT_DIR$/inventory/client/ui/create-item_inventories.jade" />
+        <option value="$PROJECT_DIR$/inventory/lib/inventories_items_coll.js" />
+        <option value="$PROJECT_DIR$/inventory/lib/rest_api_collections.js" />
+        <option value="$PROJECT_DIR$/server/pages_methods.js" />
+        <option value="$PROJECT_DIR$/server/server_side_routes.js" />
+        <option value="$PROJECT_DIR$/client/ui/web-public.jade" />
         <option value="$PROJECT_DIR$/client/ui/webpublic.js" />
+        <option value="$PROJECT_DIR$/lib/pages_coll.js" />
       </list>
     </option>
   </component>
@@ -187,7 +186,21 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="inventory" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portal_backend_v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="portal_backend_v1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -257,16 +270,16 @@
     <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib" />
-      <recent name="$PROJECT_DIR$/inventory/client/ui" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/inventory/server" />
       <recent name="$PROJECT_DIR$/inventory/client" />
       <recent name="$PROJECT_DIR$/inventory/lib" />
       <recent name="$PROJECT_DIR$/inventory" />
       <recent name="$PROJECT_DIR$/client/ui" />
-      <recent name="$PROJECT_DIR$/client/ui/templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/inventory/client/ui" />
     </key>
   </component>
   <component name="RunManager">
@@ -352,18 +365,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15264423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15264423" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -424,18 +437,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.meteor/packages/cfs_base-package/0.0.30/web.browser/packages/cfs_base-package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49039882">
+          <caret line="375" column="0" selection-start-line="375" selection-start-column="0" selection-end-line="375" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/pages_methods.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server_side_routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/ui/web-public.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
-          <folding />
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+          <folding>
+            <marker date="1466457339000" expanded="true" signature="2169:2252" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/ui/webpublic.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6011817">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="2" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/pages_coll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54239404">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
           <folding />
         </state>
       </provider>

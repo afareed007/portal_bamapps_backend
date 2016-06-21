@@ -16,18 +16,67 @@ Template.pagesList.onCreated(function(){
             //});
         }
     });
+
 });
+//Template.pagesList.onRendered(function(){
+//
+//    var $summernote = $('#pagesInsert');
+//    $summernote.summernote({
+//        onImageUpload: function(files) {
+//
+//            var imagesURL =[];
+//            var filename;
+//            var $dom =[];
+//
+//            console.log('on Image Pload summernote');
+//            // upload image to server and create imgNode...
+//            var imgNode = "http://www.da-files.com/artnetwork/zeitgeist/top-5-dragons/img-18.jpg";
+//            pagesInsert.summernote('insertNode', imgNode);
+//
+//            //for (var i = 0, ln = files.length; i < ln; i++) {
+//            //    Images.insert(files[i], function (err, fileObj) {
+//            //        if (err){
+//            //            console.log(err);
+//            //        } else {
+//            //            console.log(fileObj)
+//            //            imagesURL[i] = '/cfs/files/images/' + fileObj._id;
+//            //            Photos.insert({
+//            //                url: imagesURL[i]
+//            //            });
+//            //        }
+//            //    });
+//            //
+//            //    $dom[i] = $("<img>").attr('src',imagesURL[i]);
+//            //    $summernote.summernote("insertNode", $dom[i]);
+//            //}
+//
+//        }
+//    });
+//
+//});
+
 Template.pagesList.helpers({
+
     images: function () {
         return Images.find(); // Where Images is an FS.Collection instance
     },
     pages: function(){
         return Pages.find({});
     },
-    getFEContext: function () {
+    "imagePasted": function () {
+        console.log("imagePsted used 2232232");
+        var self = this;
+        //return function (e, editor, img) {
+        //
+        //};
+        return false;
+    },
+    "getFEContext": function () {
         var self = this;
         console.log('inside first getFEContext');
         return {
+
+
             //imageUploadToS3: {
             //    bucket: '',
             //    // Your bucket region.
@@ -59,10 +108,11 @@ Template.pagesList.helpers({
             //tabSpaces: true,
 
             // FE save.before event handler function:
-
+            //
             "_onimage.beforeUpload": function (e, editor, images) {   //"_on.beforeImageUpload": function (e, editor, images) {
 
                 var newHTML = editor.html.get(true /* keep_markers */);
+
                 console.log("the comment inside onsave.before: ${newHtml}");
 
                 //FS.Utility.eachFile(event, function(image) {
@@ -72,12 +122,26 @@ Template.pagesList.helpers({
                         if (err) {
                             console.log(err);
                         } else {
-                            var imagesURL = {"profile.image": "/cfs/files/images/" + fileObj._id};
+                            var imagesURL = fileObj._id;
                             console.log(imagesURL);
                         }
                     });
                 }
+            },
+            fileUploadMethod: 'PUT',
+            imageUploadMethod: 'PUT',
+            imageUploadParams: {id: 'my_editor'},
+            imageUploadURL:'/upload_image/dsdsdf',
+
+
+
+            "_onimage.error": function (e, editor, error, response) {
+                console.log(error);
             }
+
+            //imageUploadParams: {
+            //    id: 'my_editor'
+            //},
         }
     }
 });

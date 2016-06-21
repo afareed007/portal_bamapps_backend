@@ -41,8 +41,10 @@ template(name="pagesList")
                     div
                         a(href='{{this.url}}', target='_blank')
                             img.thumbnail(src="{{this.url store='thumbs' uploading='/images/uploading.gif' storing='/images/storing.gif'}}", alt='')
-            form
-                +froalaReactive getFEContext
+            div
+                |{{> quickForm id="pagesInsert" collection="Pages" type="insert"}}
+            //form
+            //    |{{> froalaReactive getFEContext _onimage.beforeUpload=imagePasted}}
             +if TemplateVar.get 'show'
                 div()
                     //form

@@ -1,0 +1,3 @@
+//SimpleRest.configure({
+//    collections: []
+//});
