@@ -25,14 +25,11 @@ accounts-password
 arillo:flow-router-helpers
 frozeman:template-var
 aldeed:collection2
-mpowaga:autoform-summernote
 fortawesome:fontawesome
 aldeed:autoform
 aldeed:simple-schema
 dburles:collection-helpers
 reywood:publish-composite
-froala:editor-reactive
-froala:editor
 cfs:standard-packages
 cfs:gridfs
 mdg:validation-error@0.5.1
@@ -41,4 +38,7 @@ summernote:standalone@0.8.1
 alanning:roles
 check
 meteorhacks:picker
-orionjs:core
+froala:editor-reactive
+session
+meteortoys:allthings
+summernote:summernote

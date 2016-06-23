@@ -9,8 +9,10 @@ FlowRouter.route('/web/:page', {
     },
     action: function(params, queryParams) {
         var pageName = 'web'+params.page;
-        console.log("Yeah! We are on the /:"+ pageName);
         BlazeLayout.render("layout1", {top: "header", main: pageName, pagesList: "createNew"});
     }
 });
 
+FlowRouter.subscriptions = function() {
+    this.register('images', Meteor.subscribe('images'));
+};

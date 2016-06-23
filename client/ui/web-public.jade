@@ -36,15 +36,10 @@ template(name="pagesList")
                     button.btn.btn-default.btn-filter(type='button', data-target='all') Archived
             br
             br
-            .imageView
-                +each images
-                    div
-                        a(href='{{this.url}}', target='_blank')
-                            img.thumbnail(src="{{this.url store='thumbs' uploading='/images/uploading.gif' storing='/images/storing.gif'}}", alt='')
-            div
-                |{{> quickForm id="pagesInsert" collection="Pages" type="insert"}}
-            //form
-            //    |{{> froalaReactive getFEContext _onimage.beforeUpload=imagePasted}}
+            //|{{> froalaReactive getFEContext}}
+            form
+                div#pagecontent Hello Summernote
+                //| {{> quickForm id="pagesInsert" collection="Pages" type="insert"}}
             +if TemplateVar.get 'show'
                 div()
                     //form
@@ -53,6 +48,11 @@ template(name="pagesList")
                     hr
                     h3 Pages List
                 //+quickForm id="pagesInsertQf" collection="Pages" type="insert"
+            .imageView
+                +each images
+                    div
+                        a(href='{{this.url}}', target='_blank')
+                            img.thumbnail(src="{{this.url}}", alt='', style="height: 100px;")
             .list-group
                 +each pages
                     a.list-group-item(href='#')

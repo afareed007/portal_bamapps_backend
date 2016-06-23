@@ -16,46 +16,72 @@ Template.pagesList.onCreated(function(){
             //});
         }
     });
-
 });
-//Template.pagesList.onRendered(function(){
-//
-//    var $summernote = $('#pagesInsert');
-//    $summernote.summernote({
-//        onImageUpload: function(files) {
-//
-//            var imagesURL =[];
-//            var filename;
-//            var $dom =[];
-//
-//            console.log('on Image Pload summernote');
-//            // upload image to server and create imgNode...
-//            var imgNode = "http://www.da-files.com/artnetwork/zeitgeist/top-5-dragons/img-18.jpg";
-//            pagesInsert.summernote('insertNode', imgNode);
-//
-//            //for (var i = 0, ln = files.length; i < ln; i++) {
-//            //    Images.insert(files[i], function (err, fileObj) {
-//            //        if (err){
-//            //            console.log(err);
-//            //        } else {
-//            //            console.log(fileObj)
-//            //            imagesURL[i] = '/cfs/files/images/' + fileObj._id;
-//            //            Photos.insert({
-//            //                url: imagesURL[i]
-//            //            });
-//            //        }
-//            //    });
-//            //
-//            //    $dom[i] = $("<img>").attr('src',imagesURL[i]);
-//            //    $summernote.summernote("insertNode", $dom[i]);
-//            //}
-//
-//        }
-//    });
-//
-//});
+
+Template.pagesList.rendered = function() {
+    var template = this;
+    var element = this.$('.thePagesContentEditor');
+    $('.thePagesContentEditor').on('beforeImageUpload', function (e, editor, images) {
+        var self = $(this);
+        var file = images[0];
+        console.log('starting image uploade from froala');
+        var fsFile = new FS.File(file);
+        fsFile.metadata = {foo: "bar"};
+        console.log(fsFile);
+        Images.insert( fsFile, function (err, fileObj) {
+            console.log('id: ',fileObj._id);
+
+            cursor = Images.find(fileObj._id);
+            cursor.observeChanges({
+                added: function (id, fields) {
+                    console.log('added to tge cursor');
+                },
+                changed: function (id, fields) {
+                    var url = fileObj.url();
+                    console.log("changed!", url);
+                    console.log('File: ',fileObj.foo);
+                    self.editable('writeImage', url, true);
+                }
+            });
+        });
+    });
+    $('#pagecontent').summernote({
+        height: 400,
+        maxHeight:800,
+        minHeight:250,
+        callbacks: {
+            onImageUpload: function(files, editor, $editable) {
+                var file = files[0];
+                var fsFile = new FS.File(file);
+                fsFile.foo ="bar";
+                Images.insert(fsFile, function(err, fileObj) {
+                    console.log("after insert:", fileObj._id);
+                    template.autorun(function(c) {
+                        fileObj = Images.findOne(fileObj._id);
+                        var url = fileObj.url();
+                        if (url) {
+                            $("#pagecontent").summernote("insertImage", fileObj.url(), "Image Title");
+                            //editor.insertImage($editable, url);
+                            c.stop();
+                        }
+                    }, {
+                        tx: true
+                    });
+                    cursor = Images.find(fileObj._id);
+                    cursor.observeChanges({
+                        changed: function (id, fields) {
+                            console.log('File: ',fileObj.foo);
+                        }
+                    });
+                });
+            }
+        }
+    });
+};
 
 Template.pagesList.helpers({
+
+
 
     images: function () {
         return Images.find(); // Where Images is an FS.Collection instance
@@ -73,28 +99,10 @@ Template.pagesList.helpers({
     },
     "getFEContext": function () {
         var self = this;
-        console.log('inside first getFEContext');
+        var thisLink  = '/upload_image/AaqJGmPL32eLjrp6B';
+        Session.set('thisLink', thisLink);
+        var imagesURL;
         return {
-
-
-            //imageUploadToS3: {
-            //    bucket: '',
-            //    // Your bucket region.
-            //    region: 's3-eu-west-1',
-            //    keyStart: 'uploads/',
-            //    callback: function (url, key) {
-            //        // The URL and Key returned from Amazon.
-            //        console.log (url);
-            //        console.log (key);
-            //    },
-            //    params: {
-            //        acl: 'public-read', // ACL according to Amazon Documentation.
-            //        AWSAccessKeyId: '' // Access Key from Amazon.
-            //        //policy: 'POLICY_STRING', // Policy string computed in the backend.
-            //        //signature: '', // Signature computed in the backend.
-            //    }
-            //},
-
             heightMin: 300,
             //editInPopup: true,
             //_value: self.myDoc.myHTMLField,
@@ -109,30 +117,39 @@ Template.pagesList.helpers({
 
             // FE save.before event handler function:
             //
-            "_onimage.beforeUpload": function (e, editor, images) {   //"_on.beforeImageUpload": function (e, editor, images) {
+            //
+            //"_onimage.beforeImageUpload": function (e, editor, response) {
+            //    console.log("_onimage.uploaded");
+            //    console.log("---------------------");
+            //
+            //    console.log('starting image uploade from froala');
+            //    var self = $(this);
+            //    var file = images[0];
+            //    var fsFile = new FS.File(file);
+            //    fsFile.foo ="bar";
+            //    console.log(fsFile);
+            //
+            //    Images.insert( fsFile, function (err, fileObj) {
+            //        cursor = Images.find(fileObj._id);
+            //        console.log(cursor);
+            //        cursor.observeChanges({
+            //            changed: function (id, fields) {
+            //                var url = fileObj.url();
+            //                console.log("changed!", url);
+            //                console.log('File: ',fileObj.foo);
+            //                self.editable('writeImage', url, true);
+            //            }
+            //        });
+            //    });
+            //
+            //},
 
-                var newHTML = editor.html.get(true /* keep_markers */);
-
-                console.log("the comment inside onsave.before: ${newHtml}");
-
-                //FS.Utility.eachFile(event, function(image) {
-                console.log("_onimage.beforeUpload");
-                for (var i = 0, ln = images.length; i < ln; i++) {
-                    Images.insert(images[i], function (err, fileObj) {
-                        if (err) {
-                            console.log(err);
-                        } else {
-                            var imagesURL = fileObj._id;
-                            console.log(imagesURL);
-                        }
-                    });
-                }
-            },
-            fileUploadMethod: 'PUT',
-            imageUploadMethod: 'PUT',
-            imageUploadParams: {id: 'my_editor'},
-            imageUploadURL:'/upload_image/dsdsdf',
-
+            //fileUploadMethod: 'PUT',
+            //imageUploadMethod: 'PUT',
+            //imageUploadParam: 'image_param',
+            //imageUploadParams: {id: 'my_editor'},
+            ////imageUploadURL: '/upload_image/JhvMHcgS3HpSgys88'
+            //imageUploadURL: Session.get('thisLink'),
 
 
             "_onimage.error": function (e, editor, error, response) {

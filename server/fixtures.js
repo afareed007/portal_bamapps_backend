@@ -14,8 +14,8 @@ function addUpdateUsersRoles () {
     var users;
     users = [
         {name:"AdminUser-Af",email:"afareed92@gmail1.com",roles:['super-admin'], group:"techchaps"},
-        {name:"AdminUser-Af",email:"afareed92@gmail.com",roles:['super-admin'], group:"techchaps"},
-        {name:"AdminUser-Af",email:"afareed92@gmail.com",roles:['admin'], group:"lhs"}
+        {name:"AdminUser-Af1",email:"afareed92@gmail.com",roles:['super-admin'], group:"techchaps"},
+        {name:"AdminUser-Af1",email:"afareed92@gmail.com",roles:['admin'], group:"lhs"}
     ];
     _.each(users, function (userData) {
         if (!Accounts.findUserByEmail(userData.email)) {

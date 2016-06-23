@@ -8,13 +8,13 @@ Picker.route( '/upload_image/:link', function( params, request, response, next )
         query: params.query,
         body: request.body
     };
-    console.log(request);
-
+    console.log(params);
 
     response.setHeader( 'Content-Type', 'application/json' );
     response.statusCode = 200;
+    var link = '/cfs/files/images/' + params.link;
+    console.log(link);
 
-    var link = '/cfs/files/images/6ZSD6zf9xxdCcRmL6';
     var json = JSON.stringify({
         link: link
     });
