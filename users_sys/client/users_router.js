@@ -16,3 +16,5 @@
 //FlowRouter.subscriptions = function() {
 //    this.register('images', Meteor.subscribe('images'));
 //};
+
+//TODO start scaffolding

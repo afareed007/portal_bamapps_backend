@@ -17,6 +17,7 @@ Pages.helpers({
     //    return Pages.find({});
     //}
 });
+//todo: instead of allow add method to insert pages
 
 var imageStore = new FS.Store.GridFS("images", {
     maxTries: 5, // optional, default 5

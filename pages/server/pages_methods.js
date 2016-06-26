@@ -1,3 +1,4 @@
+//todo: check() Match.Test() and groups/roles permission test
 Meteor.methods({
     "insertImagesFroalaPages": function (request) {
 

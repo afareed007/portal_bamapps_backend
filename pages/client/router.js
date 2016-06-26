@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
     action: function() {
-        BlazeLayout.render("layout1", {top: "header", main: "page-front"});
+        BlazeLayout.render("layoutFrontPage", {top: "header", main: "page-front"});
     }
 });
 FlowRouter.route('/web/:page', {

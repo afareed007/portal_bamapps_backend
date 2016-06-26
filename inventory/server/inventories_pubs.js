@@ -1,3 +1,4 @@
+//todo: implement check and orgs to inventories along with roles groups permissions
 Meteor.publish('inventories', function (group) {
     if (Roles.userIsInRole(this.userId, ['super-admin'], group)) {
         return Inventories.find({});
